@@ -1,17 +1,5 @@
 package com.massivecraft.massivecore;
 
-import java.lang.reflect.Modifier;
-import java.util.Map.Entry;
-import java.util.Random;
-import java.util.Set;
-import java.util.UUID;
-
-import org.bukkit.Bukkit;
-import org.bukkit.Sound;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-
 import com.massivecraft.massivecore.adapter.BackstringEnumSetAdapter;
 import com.massivecraft.massivecore.adapter.EntryAdapter;
 import com.massivecraft.massivecore.adapter.InventoryAdapter;
@@ -45,18 +33,17 @@ import com.massivecraft.massivecore.command.massivecore.CmdMassiveCoreClick;
 import com.massivecraft.massivecore.command.massivecore.CmdMassiveCoreCmdurl;
 import com.massivecraft.massivecore.command.massivecore.CmdMassiveCoreStore;
 import com.massivecraft.massivecore.command.massivecore.CmdMassiveCoreUsys;
-import com.massivecraft.massivecore.engine.EngineMassiveCoreGank;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreChestGui;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreCollTick;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreCommandRegistration;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreDatabase;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreDestination;
+import com.massivecraft.massivecore.engine.EngineMassiveCoreGank;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreMain;
 import com.massivecraft.massivecore.engine.EngineMassiveCorePlayerLeave;
 import com.massivecraft.massivecore.engine.EngineMassiveCorePlayerState;
 import com.massivecraft.massivecore.engine.EngineMassiveCorePlayerUpdate;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreScheduledTeleport;
-import com.massivecraft.massivecore.engine.EngineMassiveCoreSponsor;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreTeleportMixinCause;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreVariable;
 import com.massivecraft.massivecore.engine.EngineMassiveCoreWorldNameSet;
@@ -94,6 +81,17 @@ import com.massivecraft.massivecore.xlib.gson.JsonArray;
 import com.massivecraft.massivecore.xlib.gson.JsonNull;
 import com.massivecraft.massivecore.xlib.gson.JsonObject;
 import com.massivecraft.massivecore.xlib.gson.JsonPrimitive;
+import org.bukkit.Bukkit;
+import org.bukkit.Sound;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+
+import java.lang.reflect.Modifier;
+import java.util.Map.Entry;
+import java.util.Random;
+import java.util.Set;
+import java.util.UUID;
 
 public class MassiveCore extends MassivePlugin
 {
@@ -208,7 +206,6 @@ public class MassiveCore extends MassivePlugin
 			MultiverseColl.class,
 			AspectColl.class,
 			MassiveCoreMConfColl.class,
-			MassiveCoreMSponsorInfoColl.class,
 		
 			// Engine
 			EngineMassiveCoreChestGui.class,
@@ -225,7 +222,6 @@ public class MassiveCore extends MassivePlugin
 			EngineMassiveCoreTeleportMixinCause.class,
 			EngineMassiveCoreVariable.class,
 			EngineMassiveCoreWorldNameSet.class,
-			EngineMassiveCoreSponsor.class,
 			
 			// Util
 			PlayerUtil.class,

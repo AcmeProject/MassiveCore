@@ -10,7 +10,7 @@
     <build>
         <defaultGoal>clean package</defaultGoal>
         <finalName>${project.name}</finalName>
-        <sourceDirectory>${basedir}</sourceDirectory>
+        <sourceDirectory>${basedir}/src</sourceDirectory>
         <resources>
             <resource>
                 <targetPath>.</targetPath>

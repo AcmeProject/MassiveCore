@@ -1,17 +1,16 @@
 package com.massivecraft.massivecore;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import org.bukkit.permissions.Permissible;
-
 import com.massivecraft.massivecore.command.editor.annotation.EditorType;
 import com.massivecraft.massivecore.store.Entity;
 import com.massivecraft.massivecore.util.MUtil;
 import com.massivecraft.massivecore.util.PermUtil;
 import com.massivecraft.massivecore.util.TimeUnit;
 import com.massivecraft.massivecore.xlib.mongodb.WriteConcern;
+import org.bukkit.permissions.Permissible;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class MassiveCoreMConf extends Entity<MassiveCoreMConf>
 {
@@ -130,14 +129,6 @@ public class MassiveCoreMConf extends Entity<MassiveCoreMConf>
 	public static WriteConcern getMongoDbWriteConcern(boolean catchingErrors) { return catchingErrors ? WriteConcern.ACKNOWLEDGED : WriteConcern.UNACKNOWLEDGED; }
 	public WriteConcern getMongoDbWriteConcernSave() { return getMongoDbWriteConcern(this.catchingMongoDbErrorsOnSave); }
 	public WriteConcern getMongoDbWriteConcernDelete() { return getMongoDbWriteConcern(this.catchingMongoDbErrorsOnDelete); }
-	
-	// -------------------------------------------- //
-	// SPONSOR
-	// -------------------------------------------- //
-	// URL connections to http://sponsorinfo.massivecraft.com/
-	
-	public long sponsorUpdateMillis = 0;
-	public boolean sponsorEnabled = true;
 	
 	// -------------------------------------------- //
 	// MCSTATS
